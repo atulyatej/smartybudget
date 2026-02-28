@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6551301135093849"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartyBudget - Sign Up</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg-color-light: #f8f9fa;
+      --text-color-dark: #212529;
+      --bg-color-dark: #121212;
+      --text-color-light: #f8f9fa;
+      --primary-color: #007bff;
+      --secondary-color: #6c757d;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color-light);
+      color: var(--text-color-dark);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    body.dark-mode {
+      background-color: var(--bg-color-dark);
+      color: var(--text-color-light);
+    }
+    .navbar {
+      background: linear-gradient(135deg, #2d3436, #212f3d);
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    .navbar-nav .nav-link {
+      color: #ffffff !important;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      transition: transform 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover {
+      transform: scale(1.1);
+      background-color: #1e2a3a;
+    }
+    .dark-mode-toggle {
+      background-color: var(--secondary-color);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 8px 12px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .signup-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 85vh;
+    }
+    .signup-card {
+      width: 100%;
+      max-width: 420px;
+      padding: 30px;
+      border-radius: 12px;
+      background-color: var(--bg-color-light);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+      transition: 0.3s;
+    }
+    .form-control:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+    }
+    .btn-primary {
+      background-color: var(--primary-color);
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 1.1rem;
+    }
+    body.dark-mode .signup-card {
+      background-color: var(--bg-color-dark);
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    }
+    body.dark-mode .form-control {
+      background-color: #222;
+      color: #fff;
+      border: 1px solid var(--primary-color);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="index.html">SmartyBudget</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="budget.html">Budget</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item">
+            <button class="dark-mode-toggle" id="darkModeToggle">🔳</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="signup-container">
+    <div class="signup-card">
+      <h2 class="text-center mb-4">Create Your SmartyBudget Account</h2>
+      <form id="signupForm">
+        <div class="mb-3">
+          <label for="fullname" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullname" required>
+        </div>
+        <div class="mb-3">
+          <label for="username" class="form-label">Username or E-mail</label>
+          <input type="text" class="form-control" id="username" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3 w-100">Sign Up</button>
+        <div class="text-center mt-3">
+          <a href="signin.html">Already have an account? Sign In</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white text-center p-4 mt-5">
+    <p>&copy; 2025 SmartyBudget. All Rights Reserved.</p>
+    <a href="contact.html" class="text-white">Contact Us</a> |
+    <a href="terms.html" class="text-white">Terms & Conditions</a>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+      if (localStorage.getItem("dark-mode") === "enabled") {
+        body.classList.add("dark-mode");
+        darkModeToggle.textContent = "🔲";
+      }
+      darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        localStorage.setItem("dark-mode", body.classList.contains("dark-mode") ? "enabled" : "disabled");
+        darkModeToggle.textContent = body.classList.contains("dark-mode") ? "🔲" : "🔳";
+      });
+
+      const signupForm = document.getElementById("signupForm");
+      signupForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const fullname = document.getElementById("fullname").value;
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        const user = { fullname, username, password };
+        localStorage.setItem(username, JSON.stringify(user));
+
+        alert("Account created successfully!");
+        window.location.href = "signin.html";
+      });
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

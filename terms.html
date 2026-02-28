@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6551301135093849"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms and Conditions | SmartyBudget</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color-light: #f8f9fa;
+      --text-color-dark: #212529;
+      --bg-color-dark: #121212;
+      --text-color-light: #f8f9fa;
+      --primary-color: #007bff;
+      --secondary-color: #6c757d;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color-light);
+      color: var(--text-color-dark);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark-mode {
+      background-color: var(--bg-color-dark);
+      color: var(--text-color-light);
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, #2d3436, #212f3d);
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-nav .nav-link {
+      color: #ffffff !important;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      transform: scale(1.1);
+      background-color: #1e2a3a;
+    }
+
+    .terms-container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: var(--bg-color-light);
+      border-radius: 8px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .terms-container.dark-mode {
+      background-color: var(--bg-color-dark);
+    }
+
+    .terms-container h2 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 30px;
+    }
+
+    .terms-container p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .dark-mode-toggle {
+      background-color: var(--secondary-color);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 8px 12px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .dark-mode-toggle:hover {
+      background-color: #2980b9;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="index.html">SmartyBudget</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="budget.html">Budget</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li class="nav-item">
+                    <button class="dark-mode-toggle" id="darkModeToggle">🔳</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+  <div class="terms-container" id="termsContainer">
+    <h2>Terms and Conditions</h2>
+
+    <p><strong>Welcome to SmartyBudget!</strong></p>
+    <p>These Terms and Conditions ("Terms") govern your use of our website, products, and services ("Services"). By accessing or using SmartyBudget, you agree to comply with these Terms.</p>
+
+    <h4>1. General Terms</h4>
+    <p>1.1. You agree not to use the website for any illegal or unauthorized purposes.</p>
+    <p>1.2. You must not upload or transmit any content that is harmful, offensive, or violates any applicable law.</p>
+
+    <h4>2. Account Information</h4>
+    <p>2.1. To access certain features, you may need to create an account. You agree to provide accurate and complete information during the registration process.</p>
+    <p>2.2. You are responsible for maintaining the confidentiality of your account and password.</p>
+
+    <h4>3. Payments and Subscriptions</h4>
+    <p>3.1. Some features of SmartyBudget may require a paid subscription. All payments are handled securely, and you agree to provide accurate billing information.</p>
+
+    <h4>4. Termination</h4>
+    <p>4.1. We reserve the right to suspend or terminate your access to the website if we believe you have violated these Terms.</p>
+
+    <h4>5. Limitation of Liability</h4>
+    <p>5.1. We are not responsible for any loss or damage arising from the use of the website.</p>
+
+    <h4>6. Changes to Terms</h4>
+    <p>6.1. We may update these Terms from time to time. The updated Terms will be posted on this page, and you will be notified of any significant changes.</p>
+
+    <h4>7. Contact Us</h4>
+    <p>If you have any questions about these Terms and Conditions, please contact us at support@smartybudget.com.</p>
+  </div>
+  <footer class="bg-dark text-white text-center p-4 mt-5">
+    <p>&copy; 2025 SmartyBudget. All Rights Reserved.</p>
+    <a href="contact.html" class="text-white">Contact Us</a> | 
+    <a href="terms.html" class="text-white">Terms & Conditions</a>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+      const termsContainer = document.getElementById("termsContainer");
+      if (localStorage.getItem("dark-mode") === "enabled") {
+        body.classList.add("dark-mode");
+        termsContainer.classList.add("dark-mode");
+        darkModeToggle.textContent = "🔲";
+      }
+      darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        termsContainer.classList.toggle("dark-mode");
+        const isDarkMode = body.classList.contains("dark-mode");
+        localStorage.setItem("dark-mode", isDarkMode ? "enabled" : "disabled");
+        darkModeToggle.textContent = isDarkMode ? "🔲" : "🔳";
+      });
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
